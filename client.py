@@ -77,7 +77,7 @@ def pyautogui_map(action, position, value, img_url):
     print(f'position: [{x}, {y}]')
     if action == 'CLICK':
         # 移动到指定位置
-        pyautogui.moveTo(x, y, duration=2)
+        pyautogui.moveTo(x, y, duration=1)
         # 等待一秒钟
         time.sleep(1)
         # 点击指定位置
@@ -85,6 +85,7 @@ def pyautogui_map(action, position, value, img_url):
     elif action == 'INPUT':
         # 移动到指定位置
         pyautogui.moveTo(x, y, duration=1)
+        pyautogui.click(x, y)
         # 等待一秒钟
         time.sleep(1)
         # 输入文本
